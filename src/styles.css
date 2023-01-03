@@ -1,0 +1,29 @@
+html {
+  background-color: #b693fe;
+}
+
+body {
+  background-color: #b693fe;
+}
+
+button {
+  margin: 10px;
+}
+
+footer {
+  margin: 0em;
+}
+
+label {
+  color: #fff;
+}
+
+input {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+
+.row {
+  margin: 0em;
+}
