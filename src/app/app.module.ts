@@ -32,6 +32,10 @@ import { EditProyectosComponent } from './components/proyectos/edit-proyectos.co
 import { NewProyectosComponent } from './components/proyectos/new-proyectos.component';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgxSpinnerModule } from "ngx-spinner";
+import { RedesComponent } from './components/redes/redes.component';
+import { NuevaRedComponent } from './components/redes/nueva-red.component';
+import { EditRedComponent } from './components/redes/edit-red.component';
+
 
 
 @NgModule({
@@ -57,6 +61,9 @@ import { NgxSpinnerModule } from "ngx-spinner";
     EditAcercaDeComponent,
     EditProyectosComponent,
     NewProyectosComponent,
+    RedesComponent,
+    NuevaRedComponent,
+    EditRedComponent,
   ],
   imports: [
     BrowserModule,
@@ -65,7 +72,10 @@ import { NgxSpinnerModule } from "ngx-spinner";
     NgCircleProgressModule.forRoot({}),
     HttpClientModule,
     BrowserAnimationsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage()),
     NgxSpinnerModule,
+    
   ],
   providers: [
     interceptorProvider

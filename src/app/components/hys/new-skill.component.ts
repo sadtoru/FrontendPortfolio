@@ -12,6 +12,7 @@ import Swal from 'sweetalert2';
 export class NewSkillComponent implements OnInit {
   nombre: string;
   porcentaje: number;
+  iconSkill: string;
 
   constructor(private skillS: SkillService, private router: Router) { }
 
@@ -19,7 +20,7 @@ export class NewSkillComponent implements OnInit {
   }
 
   onCreate(): void{
-    const skill = new Skill(this.nombre, this.porcentaje);
+    const skill = new Skill(this.nombre, this.porcentaje, this.iconSkill);
     this.skillS.save(skill).subscribe(
       data => {
         Swal.fire({

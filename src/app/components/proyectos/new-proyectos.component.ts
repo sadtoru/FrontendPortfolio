@@ -11,9 +11,10 @@ import Swal from 'sweetalert2';
   styleUrls: ['./new-proyectos.component.scss']
 })
 export class NewProyectosComponent implements OnInit {
-  nombre: string;
-  descripcion: string;
-  img: string;
+  nombre: string="";
+  descripcion: string="";
+  imgP: string="";
+  gitLink: string="";
   constructor(private proyectoService: ProyectoService, private router: Router, public imagePService: ImageProyectoService) { }
 
   ngOnInit(): void {
@@ -21,7 +22,8 @@ export class NewProyectosComponent implements OnInit {
   }
 
   onCreate(): void{
-    const proyecto = new Proyecto(this.nombre, this.descripcion, this.img = this.imagePService.url);
+    this.imgP = this.imagePService.url;
+    const proyecto = new Proyecto(this.nombre, this.descripcion, this.imgP = this.imagePService.url, this.gitLink);
     this.proyectoService.save(proyecto).subscribe(
       data => {
         Swal.fire({

@@ -14,7 +14,7 @@ import Swal from 'sweetalert2';
 export class EditProyectosComponent implements OnInit {
   proyecto: Proyecto = null;
   imagenCargada: boolean = false;
-  constructor(private proyectoService: ProyectoService,private activatedRouter: ActivatedRoute, private router: Router, public imagePService: ImageProyectoService, private spinner: NgxSpinnerService) { }
+  constructor(private proyectoService: ProyectoService, private activatedRouter: ActivatedRoute, private router: Router, public imagePService: ImageProyectoService, private spinner: NgxSpinnerService) { }
 
 
   ngOnInit(): void {   /** spinner starts on init */
@@ -42,7 +42,7 @@ export class EditProyectosComponent implements OnInit {
   onUpdate(): void{
     const id = this.activatedRouter.snapshot.params['id'];
     if(!(this.imagePService.url == "")){
-      this.proyecto.img = this.imagePService.url;
+      this.proyecto.imgP = this.imagePService.url;
     }
     this.proyectoService.update(id, this.proyecto).subscribe(
       data => {
@@ -77,7 +77,7 @@ export class EditProyectosComponent implements OnInit {
 
   uploadImage($event:any){
     if($event.target.files[0] == null){
-      this.imagePService.url = this.proyecto.img;
+      this.imagePService.url = this.proyecto.imgP;
     } else {
       const name = "proyecto_" + this.proyecto.nombre;
       this.imagePService.uploadImage($event, name);

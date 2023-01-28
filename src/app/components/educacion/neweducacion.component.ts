@@ -10,8 +10,9 @@ import Swal from 'sweetalert2';
   styleUrls: ['./neweducacion.component.scss']
 })
 export class NeweducacionComponent implements OnInit {
-  nombreEd: string;
-  descripcionEd: string;
+  nombreE: string;
+  descripcionE: string;
+  fechaE: string;
 
   constructor(private educacionS: EducacionService, private router: Router) { }
 
@@ -19,7 +20,7 @@ export class NeweducacionComponent implements OnInit {
   }
 
   onCreate(): void {
-    const educacion = new Educacion(this.nombreEd, this.descripcionEd);
+    const educacion = new Educacion(this.nombreE, this.descripcionE, this.fechaE);
     this.educacionS.save(educacion).subscribe(
       data => {
         Swal.fire({

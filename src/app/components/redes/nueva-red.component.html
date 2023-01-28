@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row">
+      <div>
+        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+          <div class="form-group">
+            <label for="nombre">Nombre de la red</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre">
+          </div>
+          <div class="form-group">
+            <label for="url">Url</label>
+            <input type="text" class="form-control" id="url" name="url" [(ngModel)]="url" required>
+          </div>
+          <div class="form-group">
+           
+            <label class="form-label" for="iconRed">Icono <i [class]="iconRed"></i></label>
+            <select name="iconRed" id="iconRed" class="form-select" [(ngModel)]="iconRed">
+              <option selected>Eliga un icono</option>
+              <option value="fa-brands fa-github">Github</option>
+              <option value="fa-brands fa-linkedin">Linkedin</option>
+              <option value="fa-brands fa-instagram">Instagram</option>
+              <option value="fa-brands fa-telegram">Telegram</option>
+              <option value="fa-brands fa-facebook">Facebook</option>
+              <option value="fa-brands fa-twitter">Twitter</option>
+            </select>
+
+          </div>
+          
+          <button class="btn btn-primary">
+            Agregar experiencia
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>

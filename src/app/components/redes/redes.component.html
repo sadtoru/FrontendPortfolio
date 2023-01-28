@@ -1,0 +1,65 @@
+<div class="container">
+  <div class="row justify-content-center align-items-center text-center">
+    <div class="col-12" *ngIf="isLogged">
+      <h2 class="pt-5">
+        Nueva Red
+        <i
+        id="plus"
+          routerLink="/nuevared"
+          class="bi bi-plus"
+        ></i>
+      </h2>
+
+
+    </div>
+
+    <div class="col-12 py-5" >
+
+      <div *ngFor="let redes of red" class="d-inline-block px-3">
+
+     
+
+      <a [href]="redes.url" target="_blank">
+        <i [ngClass]="redes.iconRed"></i>
+      </a>
+
+      <div *ngIf="isLogged">
+            <button
+            class="btn btn-dark"
+            routerLink="/editred/{{ redes.id }}"
+            >
+            <i class="bi bi-pencil-fill"></i>
+          </button>
+          <button id="tacho" class="btn btn-danger" (click)="delete(redes.id)">
+            <i class="bi bi-trash-fill"></i>
+          </button>
+        </div>
+
+      </div>
+      
+</div>
+
+
+  </div>
+</div>
+
+  <!--  <div class="col-12 p-3">
+            <a href="https://github.com/sadtoru/" target="_blank">
+                <i id="icon" class="bi bi-github ms-3"></i>
+            </a>
+            
+            <a
+            href="https://www.linkedin.com/in/daiana-roc%C3%ADo-chile-ab7264204/"
+            target="_blank"
+            >
+            <i id="icon" class="bi bi-linkedin ms-3"></i>
+        </a>
+        
+        <a href="https://www.instagram.com/sadtoru_/" target="_blank">
+            <i id="icon" class="bi bi-instagram ms-3"></i>
+        </a>
+        
+        <a href="https://t.me/s4dtoru" target="_blank">
+            <i id="icon" class="bi bi-telegram ms-3"></i>
+        </a>
+    </div> -->

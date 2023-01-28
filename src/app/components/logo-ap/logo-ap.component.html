@@ -1,13 +1,39 @@
-<div class="row">
-  <div class="container">
-    <div class="logo">
+<nav class="navbar navbar-expand-md text-white py-0" >
+  <div class="container-fluid" id="color-fondo">
+      <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <img src="../../../assets/APLogo.png" alt="Logo Argentina Programa" id="logoAP">
+    <div class="collapse navbar-collapse text-center " id="navbarNavAltMarkup">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link texto text-white" aria-current="page" href="#">Sobre mi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link texto text-white " href="#">Experiencia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link texto text-white" href="#">Educación</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link texto text-white" href="#">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link texto text-white" href="#">Proyectos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link texto text-white" href="#">Contacto</a>
+          </li>
+          
+        </ul>
+     
+
+      
+      <button type="button" class="btncolor btn btn-outline-light btn-sm" (click)="login()"
+      *ngIf="!isLogged">INICIAR SESION</button>
+      <button type="button" class="btncolor btn btn-outline-light btn-sm" (click)="onLogOut()"
+      *ngIf="isLogged">CERRAR SESION</button>
     </div>
-    <div class="redes">
-        <a href="linkedin.com/in/daiana-rocío-chile-ab7264204" target="_blank"><img src="../../../assets/linkedin.png" alt="Logo de Linkedin" /></a>
-        <a href="https://github.com/sadtoru" target="_blank"><img src="../../../assets/github.png" alt="Logo de GitHub" /></a>
-        <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!isLogged">Ingreso</button>
-        <button type="button" class="btn btn-outline-light" (click)="onLogOut()" *ngIf="isLogged">Cerrar Sesion</button>
-    </div>
+    
   </div>
-</div>
+</nav>

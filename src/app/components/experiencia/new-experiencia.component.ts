@@ -12,6 +12,7 @@ import Swal from 'sweetalert2';
 export class NewExperienciaComponent implements OnInit {
   nombreE: string = '';
   descripcionE: string = '';
+  duracion: string = '';
 
   constructor(private sExperiencia: SExperienciaService, private router: Router) { }
 
@@ -19,7 +20,7 @@ export class NewExperienciaComponent implements OnInit {
   }
 
   onCreate(): void {
-    const expe = new Experiencia(this.nombreE, this.descripcionE);
+    const expe = new Experiencia(this.nombreE, this.descripcionE, this.duracion);
     this.sExperiencia.save(expe).subscribe( data => {
       Swal.fire({
         background: '#121212',

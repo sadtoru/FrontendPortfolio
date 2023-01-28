@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Storage, ref, uploadBytes, list, getDownloadURL,} from '@angular/fire/storage';
+import { Storage, ref, uploadBytes, list, getDownloadURL} from '@angular/fire/storage';
 import { NgxSpinnerService } from 'ngx-spinner';
 
 @Injectable({
@@ -12,8 +12,8 @@ export class ImageProyectoService {
 
   public uploadImage($event: any, name: string){
     this.spinner.show();
-    const file = $event.target.files[0]
-    const imgRef = ref(this.storage, `proyectos/`+ name)
+    const file = $event.target.files[0];
+    const imgRef = ref(this.storage, `proyectos/${name}`);
     uploadBytes(imgRef, file)
     .then(response => { this.imgRef = response.ref.fullPath;
       this.getImages()})

@@ -1,21 +1,14 @@
-html {
-  background-color: #b693fe;
+:root{
+  --color-secundario: #252e43;
+  --color-principal:  #2f3a53;
+  --color-letras: #170127;
+  --color-resalte: #cbc7f8;
 }
 
-body {
-  background-color: #b693fe;
-}
+
 
 button {
   margin: 10px;
-}
-
-footer {
-  margin: 0em;
-}
-
-label {
-  color: #fff;
 }
 
 input {
@@ -24,6 +17,15 @@ input {
 }
 
 
-.row {
-  margin: 0em;
+
+
+#plus {
+  cursor: pointer;
+  color: #fff;
 }
+
+/* #tacho {
+  border-radius: 100%;
+} */
+
+

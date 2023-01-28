@@ -4,6 +4,7 @@ import { ProyectoService } from 'src/app/service/proyecto.service';
 import { TokenService } from 'src/app/service/token.service';
 import Swal from 'sweetalert2';
 
+
 @Component({
   selector: 'app-proyectos',
   templateUrl: './proyectos.component.html',
@@ -13,6 +14,7 @@ export class ProyectosComponent implements OnInit {
   proyecto: Proyecto[] = [];
   constructor(public proyectoService: ProyectoService, private tokenService: TokenService) { }
   isLogged = false;
+
   ngOnInit(): void {
     this.cargarProyectos();
     if(this.tokenService.getToken()){
@@ -20,14 +22,13 @@ export class ProyectosComponent implements OnInit {
     } else {
       this.isLogged = false;
     }
+    
   }
 
-  cargarProyectos(): void{
-    this.proyectoService.lista().subscribe(
-      data => {
-        this.proyecto = data;
-      }
-    )
+  cargarProyectos(): void{ 
+    this.proyectoService.lista().subscribe( data => {
+        this.proyecto = data
+      });
   }
 
   delete(id: number){
