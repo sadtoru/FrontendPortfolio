@@ -27,6 +27,11 @@
   border: none;
 }
 
+.btncolor:hover{
+  background-color: var(--color-resalte);
+  color: #fff;
+ }
+
 .bgfooter{
   background-color: var(--color-principal);
 }

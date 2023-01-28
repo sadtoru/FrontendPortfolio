@@ -1,0 +1,22 @@
+.bgcolor{
+    background-color: var(--color-secundario);
+}
+
+.card{
+    background-color: var(--color-principal);
+}
+
+input{
+     background-color: var(--color-blanco);
+}
+
+.btncolor:hover{
+    background-color: var(--color-resalte);
+    color: #fff;
+   }
+
+
+.btncolortext:hover{
+    background-color: var(--color-blanco);
+    color: var(--color-resalte);
+}
