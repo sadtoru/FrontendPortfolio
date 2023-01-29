@@ -26,15 +26,18 @@
          
 
           <div class="pt-3" *ngIf="isLogged">
+
             <button
-            class="btn btn-dark"
-            routerLink="/editexp/{{ Experiencia.id }}"
+            class="btncolor btn btn-outline-light"
+            
             >
-            <i class="bi bi-pencil-fill"></i>
-          </button>
-          <button class="btn btn-danger" (click)="delete(Experiencia.id)">
-            <i class="bi bi-trash-fill"></i>
-          </button>
+            <i routerLink="/editexp/{{ Experiencia.id }}"
+            class="fa-solid fa-pen-to-square"></i>
+                    </button>
+
+          <button class="btntrash btn btn-outline-light" (click)="delete(Experiencia.id)">
+            <i class="fa-solid fa-trash"></i> 
+                   </button>
         </div>
 
       </div>

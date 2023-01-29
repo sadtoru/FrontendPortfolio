@@ -3,7 +3,7 @@
 }
 
  #color-fondo{
-  background-color: var(--color-secundario);
+  background-color: var(--color-principal);
  }
 
 .texto:hover{
@@ -11,12 +11,12 @@
 }
 
  .texto{
-  transition: all .8s; 
+  transition: all .5s; 
  }
 
 
 
- .btncolor:hover{
+ .btncolor{
   background-color: var(--color-resalte);
   color: #fff;
  }

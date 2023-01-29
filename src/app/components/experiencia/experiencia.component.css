@@ -22,3 +22,18 @@
   background-color: var(--color-principal);
   
 }
+
+
+.btncolor{
+  background-color: var(--color-resalte);
+
+}
+
+.btntrash{
+  background-color: var(--color-resalte);
+  
+}
+
+.btntrash:hover{
+  color: #b73101;
+}
