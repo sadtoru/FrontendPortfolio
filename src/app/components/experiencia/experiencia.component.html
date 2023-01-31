@@ -1,16 +1,16 @@
-<div class="bgcolor">
+<div id="bgcolor">
 
 
 <div class="container py-5">
 
-  <div class="row justify-content-center align-items-center text-center pt-5 text-light columna rounded">
+  <div class="row justify-content-center align-items-center text-center py-5 text-light px-4 bgborder rounded">
     <h2 class="col-12">
       Experencia Laboral
       <i id="plus" routerLink="/nuevaexp" *ngIf="isLogged" class="bi bi-plus"></i>
       
     </h2>
     
-    <div class=" col-6 col-md-3 col-xl-2 my-5 mx-auto" *ngFor="let Experiencia of expe">
+    <div class=" col-12 col-md-6 col-lg-3 my-5 mx-auto" *ngFor="let Experiencia of expe">
 
         <div class="card bg-transparent">
           <div class="card-body rounded">
