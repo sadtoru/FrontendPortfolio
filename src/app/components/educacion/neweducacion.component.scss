@@ -11,11 +11,11 @@ input{
 }
 
 .btntext:hover{
-    background-color: var(--color-blanco);
+    background-color: #475468;
     color: var(--color-resalte);
 }
 
-.btncolor:hover{
+.btncolor{
     background-color: var(--color-resalte);
     color: var(--color-blanco);
 }

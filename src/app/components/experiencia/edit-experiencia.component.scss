@@ -10,9 +10,9 @@ input{
     background-color: var(--color-blanco);
 }
 
-.btntexto:hover{
+.btntexto{
     background-color: var(--color-resalte);
-    color: #fff;
+    color: var(--color-blanco);
    }
 
    .btncolortexto:hover{

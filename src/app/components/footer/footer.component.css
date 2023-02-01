@@ -27,9 +27,9 @@
   border: none;
 }
 
-.btncolor:hover{
+.btncolor{
   background-color: var(--color-resalte);
-  color: #fff;
+  color: var(--color-blanco);
  }
 
 .bgfooter{
