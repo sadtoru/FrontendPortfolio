@@ -1,52 +1,50 @@
 <div id="bgcolor">
+  <div class="container py-5">
+    <div
+      class="row justify-content-center align-items-center text-center py-5 text-light px-4 bgborder rounded"
+    >
+      <h2 class="col-12">
+        Experencia Laboral
+        <i
+          id="plus"
+          routerLink="/nuevaexp"
+          *ngIf="isLogged"
+          class="bi bi-plus"
+        ></i>
+      </h2>
 
-
-<div class="container py-5">
-
-  <div class="row justify-content-center align-items-center text-center py-5 text-light px-4 bgborder rounded">
-    <h2 class="col-12">
-      Experencia Laboral
-      <i id="plus" routerLink="/nuevaexp" *ngIf="isLogged" class="bi bi-plus"></i>
-      
-    </h2>
-    
-    <div class=" col-12 col-md-6 col-lg-3 my-5 mx-auto" *ngFor="let Experiencia of expe">
-
+      <div
+        class="col-12 col-md-6 col-lg-3 my-5 mx-auto"
+        *ngFor="let Experiencia of expe"
+      >
         <div class="card bg-transparent">
           <div class="card-body rounded">
             <div class="border-bottom">
-
               <h5 class="card-title">{{ Experiencia.nombreE }}</h5>
             </div>
-          
-        
-          <p class="card-text py-3">{{ Experiencia.descripcionE }}</p>
 
-          <i>{{Experiencia.duracion}}</i>
-         
+            <p class="card-text py-3">{{ Experiencia.descripcionE }}</p>
 
-          <div class="pt-3" *ngIf="isLogged">
+            <i>{{ Experiencia.duracion }}</i>
 
-            <button
-            class="btncolor btn btn-outline-light"
-            
-            >
-            <i routerLink="/editexp/{{ Experiencia.id }}"
-            class="fa-solid fa-pen-to-square"></i>
-                    </button>
+            <div class="pt-3" *ngIf="isLogged">
+              <button class="btncolor btn btn-outline-light">
+                <i
+                  routerLink="/editexp/{{ Experiencia.id }}"
+                  class="fa-solid fa-pen-to-square"
+                ></i>
+              </button>
 
-          <button class="btntrash btn btn-outline-light" (click)="delete(Experiencia.id)">
-            <i class="fa-solid fa-trash"></i> 
-                   </button>
+              <button
+                class="btntrash btn btn-outline-light"
+                (click)="delete(Experiencia.id)"
+              >
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </div>
+          </div>
         </div>
-
       </div>
-      </div>
-     
-
+    </div>
   </div>
-
-</div>
-</div>
-
 </div>

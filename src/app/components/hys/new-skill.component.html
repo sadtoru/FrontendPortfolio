@@ -1,19 +1,77 @@
-<div class="container">
-  <div class="row">
-    <div>
-      <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-        <div class="form-group">
-          <label for="nombre">Nueva skill</label>
-          <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required>
+<div class="bgcolor vh-100">
+  <div class="container">
+    <div class="row justify-content-center text-light">
+      <div class="col-12 col-md-6 col-lg-6 pt-4">
+        <div class="card">
+          <div class="text-center card-header">
+            <h2 class="p-3">Nueva skill</h2>
+          </div>
+
+          <div class="card-body">
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+              <div class="form-group pt-2 mb-4">
+                <label for="nombre">Nueva skill:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nombre"
+                  name="nombre"
+                  [(ngModel)]="nombre"
+                  required
+                />
+              </div>
+              <div class="form-group pt-2 mb-4">
+                <label for="porcentaje">Porcentaje:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="porcentaje"
+                  name="porcentaje"
+                  [(ngModel)]="porcentaje"
+                  required
+                />
+              </div>
+              <div class="form-group pt-2 mb-4">
+                <label class="form-label" for="iconSkill"
+                  >Icono:</label>
+                <select
+                  name="iconSkill"
+                  id="iconSkill"
+                  class="form-select"
+                  [(ngModel)]="iconSkill"
+                >
+                  <option selected>Eliga un icono</option>
+                  <option value="../../../assets/svg/angular.svg">
+                    Angular
+                  </option>
+                  <option value="../../../assets/svg/bootstrap.svg">
+                    Bootstrap
+                  </option>
+                  <option value="../../../assets/svg/css3-alt.svg">CSS</option>
+                  <option value="../../../assets/svg/figma.svg">Figma</option>
+                  <option value="../../../assets/svg/html5.svg">Html</option>
+                  <option value="../../../assets/svg/java.svg">Java</option>
+                  <option value="../../../assets/svg/square-js.svg">
+                    JavaScript
+                  </option>
+                  <option value="../../../assets/svg/node.svg">NodeJS</option>
+                  <option value="../../../assets/svg/python.svg">Python</option>
+                  <option value="../../../assets/svg/react.svg">React</option>
+                  <option value="../../../assets/svg/vuejs.svg">VueJS</option>
+                </select>
+              </div>
+              <button
+                type="button"
+                routerLink=""
+                class="btnatras btn btn-outline-light"
+              >
+                Atrás
+              </button>
+              <button class="btnagregar btn btn-outline-light">Agregar</button>
+            </form>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="porcentaje">Porcentaje</label>
-          <input type="text" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)]="porcentaje" required>
-        </div>
-        <button class="btn btn-primary">
-          Agregar skill
-        </button>
-      </form>
+      </div>
     </div>
   </div>
 </div>

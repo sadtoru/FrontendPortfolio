@@ -14,22 +14,13 @@
   background-color: var(--color-principal);
 }
 
-/* .card-body:hover{
-  background-color: #475468;
-} */
+
 
 .border-bottom {
-  border-bottom: 1px solid var(--color-secundario)!important;
+  border-bottom: 1px solid var(--color-contraste)!important;
 }
 
-/* .columna{
-  background-color: var(--color-principal);
-  
-} */
 
-/* .card .rounded{
-  border: 1px solid var(--color-resalte)!important;
-} */
 
 .btncolor{
   background-color: var(--color-resalte);
@@ -37,7 +28,7 @@
 }
 
 .btncolor:hover{
-  color: #475468;
+  color: var(--color-tercer);
 }
 
 .btntrash{
@@ -46,5 +37,9 @@
 }
 
 .btntrash:hover{
-  color: #b73101;
+  color: var(--color-tercer);
 }
+/* 
+h2{
+  color: var(--color-contraste);
+} */

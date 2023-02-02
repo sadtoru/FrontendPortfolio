@@ -1,11 +1,13 @@
 :root{
   --color-secundario: #252e43;
   --color-principal:  #2f3a53;
+  --color-tercer: #475468;
   --color-blanco: #f2f2fe;
   --color-resalte: #cbc6f9;
+  --color-contraste: #a198f4;
 }
 
-/* #cbc6f9; */
+/* #f15e5d #d24336 #10c4a7 #6e81ad #fc7865 #76c19a #7c2034 */
 
 button {
   margin: 10px;
@@ -21,8 +23,5 @@ input {
 
 #plus {
   cursor: pointer;
-  color: #fff;
 }
-
-
 

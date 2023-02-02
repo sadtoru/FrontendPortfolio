@@ -1,48 +1,48 @@
 <div id="bgcolor">
-
-  <div class="container py-5" >
-    <div class="row justify-content-center align-items-center text-center py-5 text-light borderbg rounded px-4" >
+  <div class="container py-5">
+    <div
+      class="row justify-content-center align-items-center text-center py-5 text-light borderbg rounded px-4"
+    >
       <h2 class="col-12">
         Educación
-        <i id="plus" routerLink="/nuevaedu" *ngIf="isLogged" class="bi bi-plus"></i>
+        <i
+          id="plus"
+          routerLink="/nuevaedu"
+          *ngIf="isLogged"
+          class="bi bi-plus"
+        ></i>
       </h2>
-      
-      <div class="col-12 col-md-6 col-lg-3  my-5 mx-auto" *ngFor="let Educacion of educacion">
-       
+
+      <div
+        class="col-12 col-md-6 col-lg-3 my-5 mx-auto"
+        *ngFor="let Educacion of educacion"
+      >
         <div class="card bg-transparent">
+          <div class="card-body rounded">
+            <div class="border-bot">
+              <h5 class="card-title">{{ Educacion.nombreE }}</h5>
+            </div>
 
-      <div class="card-body rounded">
+            <p class="card-text py-3">{{ Educacion.descripcionE }}</p>
+            <i class="italic">{{ Educacion.fechaE }}</i>
 
-      <div class="border-bot">
-
-        <h5 class="card-title">{{ Educacion.nombreE }}</h5>
-
+            <div class="pt-3" *ngIf="isLogged">
+              <button
+                class="btncolor btn btn-outline-light"
+                routerLink="/editedu/{{ Educacion.id }}"
+              >
+                <i class="fa-solid fa-pen-to-square"></i>
+              </button>
+              <button
+                class="btntrash btn btn-outline-light"
+                (click)="delete(Educacion.id)"
+              >
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-
-
-
-        <p class="card-text py-3">{{ Educacion.descripcionE }}</p>
-        <i>{{Educacion.fechaE}}</i>
-
-        <div class="pt-3" *ngIf="isLogged">
-          <button
-          class="btncolor btn btn-outline-light"
-          routerLink="/editedu/{{ Educacion.id }}"
-          >
-          <i class="fa-solid fa-pen-to-square"></i>
-        </button>
-        <button class="btntrash btn btn-outline-light" (click)="delete(Educacion.id)">
-          <i class="fa-solid fa-trash"></i>
-        </button>
-      </div>
-
-
+    </div>
+  </div>
 </div>
-      </div>
-
-</div>
-</div>
-</div>
-
-</div>
-

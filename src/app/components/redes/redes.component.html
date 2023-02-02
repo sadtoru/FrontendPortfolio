@@ -3,47 +3,37 @@
     <div class="col-12" *ngIf="isLogged">
       <h2 class="pt-5">
         Nueva Red
-        <i
-        id="plus"
-          routerLink="/nuevared"
-          class="bi bi-plus"
-        ></i>
+        <i id="plus" routerLink="/nuevared" class="bi bi-plus"></i>
       </h2>
-
-
     </div>
 
-    <div class="col-12 py-5" >
-
+    <div class="col-12 py-5">
       <div *ngFor="let redes of red" class="d-inline-block px-3">
+        <a [href]="redes.url" target="_blank">
+          <i [ngClass]="redes.iconRed"></i>
+        </a>
 
-     
-
-      <a [href]="redes.url" target="_blank">
-        <i [ngClass]="redes.iconRed"></i>
-      </a>
-
-      <div *ngIf="isLogged">
-            <button
-            class="btn btn-dark"
+        <div *ngIf="isLogged">
+          <button
+            class="btncolor btn btn-outline-light"
             routerLink="/editred/{{ redes.id }}"
-            >
-            <i class="bi bi-pencil-fill"></i>
+          >
+            <i class="fa-solid fa-pen-to-square"></i>
           </button>
-          <button id="tacho" class="btn btn-danger" (click)="delete(redes.id)">
-            <i class="bi bi-trash-fill"></i>
+          <button
+            id="tacho"
+            class="btncolortext btn btn-outline-light"
+            (click)="delete(redes.id)"
+          >
+            <i class="fa-solid fa-trash"></i>
           </button>
         </div>
-
       </div>
-      
-</div>
-
-
+    </div>
   </div>
 </div>
 
-  <!--  <div class="col-12 p-3">
+<!--  <div class="col-12 p-3">
             <a href="https://github.com/sadtoru/" target="_blank">
                 <i id="icon" class="bi bi-github ms-3"></i>
             </a>

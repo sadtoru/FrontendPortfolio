@@ -1,75 +1,64 @@
 <div id="footer-color">
   <section class="cont-form">
+    <div class="container">
+      <div
+        class="row justify-content-center align-items-center text-center text-light"
+      >
+        <div class="col-12">
+          <h1 class="py-4">Contacto</h1>
 
-  
-  <div class="container">
-    <div class="row justify-content-center align-items-center text-center text-light">
-      <div class="col-12">
-        <h1 class="py-4">Contacto</h1>
+          <!-- form -->
+          <form action="https://formspree.io/f/mjvdkpgy" method="POST">
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                name="name"
+                class="form-control text-white"
+                placeholder="name"
+              />
+              <label for="name">Nombre</label>
+            </div>
 
-        <!-- form -->
-        <form action="https://formspree.io/f/mjvdkpgy" method="POST">
+            <div class="form-floating">
+              <input
+                type="email"
+                name="email"
+                class="form-control text-white"
+                placeholder="email"
+              />
+              <label for="email">Email</label>
+            </div>
 
-          <div class="form-floating mb-3">
-            <input
-              type="text"
-              name="name"
-              class="form-control"
-              placeholder="name"
-            />
-            <label for="name">Nombre</label>
-          </div>
+            <div class="form-floating">
+              <textarea
+                name="message"
+                class="form-control text-area text-white"
+                placeholder="Deja tu mensaje"
+              ></textarea>
+              <label for="message">Deja tu mensaje</label>
+            </div>
 
-          <div class="form-floating">
-            <input
-              type="email"
-              name="email"
-              class="form-control"
-              placeholder="email"
-            />
-            <label for="email">Email</label>
-          </div>
+            <button type="submit" class="btncolor btn btn-outline-light">
+              Enviar
+            </button>
+          </form>
+        </div>
+        <!-- redes -->
 
-          <div class="form-floating">
-            <textarea
-              name="message"
-              class="form-control text-area"
-              placeholder="Deja tu mensaje"              
-            ></textarea>
-            <label for="message">Deja tu mensaje</label>
-          </div>
-
-          <button type="submit" class="btncolor btn btn-outline-light">
-            Enviar
-          </button>
-
-        </form>
+        <app-redes></app-redes>
       </div>
-      <!-- redes -->
-
-      <app-redes></app-redes>
-
-      
-      
     </div>
-  </div>
-</section>
+  </section>
 </div>
 
 <div class="bgfooter">
-
   <div class="container">
     <div class="row justify-content-center text-center pt-3 text-light">
-
-      <div class="col-12 ">
-        
-        
+      <div class="col-12">
         <footer>
           <p>Daiana Rocío Chile | Argentina Programa 2023</p>
         </footer>
-        
       </div>
-      
     </div>
   </div>
 </div>

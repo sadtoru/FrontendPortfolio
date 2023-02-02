@@ -15,7 +15,7 @@
 }
 
 .btncolor:hover{
-  color: #475468;
+  color: var(--color-tercer);
 }
 
 .btntrash{
@@ -23,5 +23,11 @@
 }
 
 .btntrash:hover{
-  color: #b73101;
+  color: var(--color-tercer);
 }
+
+h4{
+  color: var(--color-blanco);
+}
+
+
