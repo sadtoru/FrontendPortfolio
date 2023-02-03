@@ -1,0 +1,25 @@
+.bgcolor{
+    background-color: var(--color-secundario);
+}
+
+.card{
+    background-color: var(--color-principal);
+}
+
+input{
+    background-color: var(--color-blanco);
+}
+
+select{
+    background-color: var(--color-blanco);
+}
+
+.btnatras:hover{
+    background-color: var(--color-blanco);
+    color: var(--color-contraste);
+}
+
+.btnactu{
+    background-color: var(--color-resalte);
+    color: var(--color-blanco);
+}
