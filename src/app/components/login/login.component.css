@@ -1,9 +1,17 @@
+section{
+  background-color: var(--color-secundario);
+  height: 100vh;
+}
+/* .card-header{
+  border-bottom: 1px solid var(--color-contraste);
+} */
+
 .card {
-  background-color: #b693fe;
-  border-color: #121212;
+  background-color: var(--color-resalte);
 }
 
-label, h3 {
-  color: #fff;
+
+.btnentrar:hover{
+  color: var(--color-contraste);
 }
 

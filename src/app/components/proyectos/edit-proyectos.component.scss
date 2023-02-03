@@ -3,3 +3,24 @@
   width: 200px;
   margin-top: 2em;
 }
+
+.bgcolor{
+  background-color: var(--color-secundario);
+}
+
+.container{
+  background-color: var(--color-secundario);
+}
+
+.card{
+  background-color: var(--color-principal);
+}
+
+.btnatras:hover{
+  color: var(--color-contraste);
+}
+
+.btnactu{
+  background-color: var(--color-resalte);
+  color: var(--color-blanco);
+}

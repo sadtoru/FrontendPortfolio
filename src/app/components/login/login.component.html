@@ -1,40 +1,42 @@
-<section style="background-color: #080808; height: 100vh;">
+<section>
   <div class="container py-5 h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-        <div class="card shadow-2-strong" style="border-radius: 1rem;">
-          <div class="card-body p-5 text-center">
-
-            <h3 class="mb-5">Inicia Sesion</h3>
-
+    <div class="row justify-content-center align-items-center text-light">
+      <div class="col-12 col-md-6 col-lg-6 col-xl-5">
+        <div class="card">
+          <div class="card-header text-center">
+            <h3 class="mt-3">Iniciar sesión</h3>
+          </div>
+          <div class="card-body py-5 text-center">
             <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
-              <div class="form-outline mb-4">
-                <input type="text" id="nombreUsuario" name="nombreUsuario" class="form-control form-control-lg" [(ngModel)]="nombreUsuario" [ngModelOptions]="{standalone: true}" required/>
-                <label class="form-label" for="nombreUsuario">Usuario</label>
+              <div class="form-group">
+                <label class="form-label" for="nombreUsuario">Usuario:</label>
+                <input
+                  type="text"
+                  id="nombreUsuario"
+                  name="nombreUsuario"
+                  class="form-control"
+                  [(ngModel)]="nombreUsuario"
+                  [ngModelOptions]="{ standalone: true }"
+                  required
+                />
               </div>
 
-              <div class="form-outline mb-4">
-                <input type="password" id="password" class="form-control form-control-lg" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" required/>
-                <label class="form-label" for="password">Contraseña</label>
+              <div class="form-group pt-3">
+                <label class="form-label" for="password">Contraseña:</label>
+                <input
+                  type="password"
+                  id="password"
+                  class="form-control"
+                  [(ngModel)]="password"
+                  [ngModelOptions]="{ standalone: true }"
+                  required
+                />
               </div>
 
-              <!-- Checkbox -->
-              <!--
-                <div class="form-check d-flex justify-content-start mb-4">
-                  <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
-                  <label class="form-check-label" for="form1Example3"> Remember password </label>
-                </div>
-              -->
-
-              <button class="btn btn-outline-light" type="submit">Login</button>
-
+              <button class="btnentrar btn btn-outline-light" type="submit">
+                Entrar
+              </button>
             </form>
-            <!--
-            <div>
-              <p class="mb-0">¿No tienes una Cuenta? <a href="#!" class="text-white-50 fw-bold">Sign Up</a>
-              </p>
-            </div>
-            -->
           </div>
         </div>
       </div>
