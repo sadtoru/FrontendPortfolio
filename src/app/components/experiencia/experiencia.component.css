@@ -39,7 +39,11 @@
 .btntrash:hover{
   color: var(--color-tercer);
 }
-/* 
-h2{
+
+.colori{
   color: var(--color-contraste);
-} */
+}
+
+.colori2{
+  color: var(--color-resalte);
+}

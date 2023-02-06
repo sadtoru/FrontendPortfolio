@@ -17,15 +17,17 @@
         class="col-12 col-md-6 col-lg-3 my-5 mx-auto"
         *ngFor="let Experiencia of expe"
       >
-        <div class="card bg-transparent">
+        <div class="card bg-transparent" >
           <div class="card-body rounded">
             <div class="border-bottom">
-              <h5 class="card-title">{{ Experiencia.nombreE }}</h5>
+              
+              <h5 class="card-title"> <i class="fa-solid fa-briefcase colori"></i>
+                {{ Experiencia.nombreE }}</h5>
             </div>
 
             <p class="card-text py-3">{{ Experiencia.descripcionE }}</p>
 
-            <i>{{ Experiencia.duracion }}</i>
+            <i> <i class="fa-regular fa-calendar-days colori2"></i> {{ Experiencia.duracion }}</i>
 
             <div class="pt-3" *ngIf="isLogged">
               <button class="btncolor btn btn-outline-light">

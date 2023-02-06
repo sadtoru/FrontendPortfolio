@@ -20,11 +20,12 @@
         <div class="card bg-transparent">
           <div class="card-body rounded">
             <div class="border-bot">
-              <h5 class="card-title">{{ Educacion.nombreE }}</h5>
+              <h5 class="card-title"> <i class="fa-solid fa-graduation-cap color1"></i> {{ Educacion.nombreE }}</h5>
             </div>
 
             <p class="card-text py-3">{{ Educacion.descripcionE }}</p>
-            <i class="italic">{{ Educacion.fechaE }}</i>
+            <i> <i class="fa-regular fa-calendar-days color2"></i>
+              {{ Educacion.fechaE }}</i>
 
             <div class="pt-3" *ngIf="isLogged">
               <button
