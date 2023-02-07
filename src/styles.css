@@ -17,10 +17,11 @@ input {
   margin-bottom: 15px;
 }
 
-
-
-
 #plus {
   cursor: pointer;
 }
 
+section#explab:hover ~ ul li a[href="#explab"]{
+  background: #fff;
+  color: #000;
+}

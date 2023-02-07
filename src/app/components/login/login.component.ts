@@ -54,7 +54,7 @@ export class LoginComponent implements OnInit {
 
       Toast.fire({
         icon: 'success',
-        title: 'Inicio de Sesion exitoso'
+        title: 'Inicio de sesión exitoso'
       })
       this.router.navigate([''])
     },err => {

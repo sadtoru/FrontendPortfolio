@@ -60,53 +60,57 @@
 
   </div>
 </div>  -->
-<div class="bgcolor">
-  <div class="container">
-    <div
+<section id="proyectos">
+
+  <div class="bgcolor">
+    <div class="container">
+      <div
       class="row justify-content-center align-items-center text-center text-light py-5 borderb rounded"
-    >
+      >
       <div class="col-12">
         <h2>
           Proyectos Realizados
           <i
-            id="plus"
-            routerLink="/nuevoproyecto"
-            *ngIf="isLogged"
-            class="bi bi-plus"
+          id="plus"
+          routerLink="/nuevoproyecto"
+          *ngIf="isLogged"
+          class="bi bi-plus"
           ></i>
         </h2>
       </div>
-
+      
       <div class="col-12 col-md-6 py-5" *ngFor="let Proyecto of proyecto">
         <div class="card m-auto" style="width: 18rem">
           <img src="{{ Proyecto.imgP }}" class="card-img-top" style="height: 250px;" />
-
+          
           <div class="card-body">
             <div class="card-header">
               <h4 class="card-title">{{ Proyecto.nombre }}</h4>
             </div>
-
+            
             <p class="card-text pt-4">{{ Proyecto.descripcion }}</p>
-
+            
             <button class="btnlink btn btn-outline-light">
               <a href="{{ Proyecto.gitLink }}" target="_blank">Link</a>
             </button>
-
+            
             <div *ngIf="isLogged">
               <button
-                class="btnedit btn btn-outline-light"
-                routerLink="/editproyecto/{{ Proyecto.id }}"
+              class="btnedit btn btn-outline-light"
+              routerLink="/editproyecto/{{ Proyecto.id }}"
               >
-                <i class="fa-solid fa-pen-to-square"></i>
-              </button>
-
-              <button class="btnborrar btn btn-outline-light" (click)="delete(Proyecto.id)">
-                <i class="fa-solid fa-trash"></i>
-              </button>
-            </div>
+              <i class="fa-solid fa-pen-to-square"></i>
+            </button>
+            
+            <button class="btnborrar btn btn-outline-light" (click)="delete(Proyecto.id)">
+              <i class="fa-solid fa-trash"></i>
+            </button>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+</div>
+
+</section>
