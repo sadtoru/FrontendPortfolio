@@ -20,8 +20,3 @@ input {
 #plus {
   cursor: pointer;
 }
-
-section#explab:hover ~ ul li a[href="#explab"]{
-  background: #fff;
-  color: #000;
-}
