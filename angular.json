@@ -36,6 +36,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": ["sweetalert2"],
             "outputPath": "dist/portfolio-daiana-chile",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -49,7 +50,6 @@
               "src/styles.css",
               "./node_modules/@fortawesome/fontawesome-free/css/all.css",
               "./node_modules/ngx-spinner/animations/pacman.css"
-            
             ],
             "scripts": [
             
