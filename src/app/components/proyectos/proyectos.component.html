@@ -1,116 +1,52 @@
-<!-- 
-
-<div id="fcolor">
-  <div class="container">
-    <div class="row justify-content-center align-items-center text-center">
-
-
-      <div class="col-12">
-        <h2>
-          Proyectos Realizados
-          <i
-            id="plus"
-            routerLink="/nuevoproyecto"
-            *ngIf="isLogged"
-            class="bi bi-plus"
-          ></i>
-        </h2>
-      </div>
-
-   
-      
-    </div>
-
-   
-
-    <div id="carouselExampleIndicators" class="carousel slide">
-      
-
-
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="row justify-content-center align-content-center text-center">
-            <div class="col-12 col-md-6">
-              <img src="https://bennettfeely.com/clippy/pics/pittsburgh.jpg" class="img-fluid" alt="...">
-            </div>
-            <div class="col-12 col-md-6">
-              <h1>titulo</h1>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, necessitatibus.</p>
-            </div>
-            
-          </div>
-
-
-        </div>
-         
-        
-      </div>
-
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-
-   
-
-  </div>
-</div>  -->
 <section id="proyectos">
-
   <div class="bgcolor">
     <div class="container">
       <div
-      class="row justify-content-center align-items-center text-center text-light py-5 borderb rounded"
+        class="row justify-content-center align-items-center text-center text-light py-5 borderb rounded"
       >
-      <div class="col-12">
-        <h2>
-          Proyectos Realizados
-          <i
-          id="plus"
-          routerLink="/nuevoproyecto"
-          *ngIf="isLogged"
-          class="bi bi-plus"
-          ></i>
-        </h2>
-      </div>
-      
-      <div class="col-12 col-md-6 py-5" *ngFor="let Proyecto of proyecto">
-        <div class="card m-auto" style="width: 18rem">
-          <img src="{{ Proyecto.imgP }}" class="card-img-top" style="height: 250px;" />
-          
-          <div class="card-body">
-            <div class="card-header">
-              <h4 class="card-title">{{ Proyecto.nombre }}</h4>
+        <div class="col-12">
+          <h2>
+            Proyectos Realizados
+            <i
+              id="plus"
+              routerLink="/nuevoproyecto"
+              *ngIf="isLogged"
+              class="bi bi-plus"
+            ></i>
+          </h2>
+        </div>
+        <div
+          class="col-12 col-md-6 col-lg-4 py-5"
+          *ngFor="let Proyecto of proyecto"
+        >
+          <div class="card m-auto card-proyecto">
+            <img src="{{ Proyecto.imgP }}" class="card-img-top" />
+            <div class="card-body">
+              <div class="card-header">
+                <h4 class="card-title">{{ Proyecto.nombre }}</h4>
+              </div>
+              <p class="card-text pt-4">{{ Proyecto.descripcion }}</p>
+              <button class="btnlink btn btn-outline-light">
+                <a href="{{ Proyecto.gitLink }}" target="_blank">Link</a>
+              </button>
+              <div *ngIf="isLogged">
+                <button
+                  class="btnedit btn btn-outline-light"
+                  routerLink="/editproyecto/{{ Proyecto.id }}"
+                >
+                  <i class="fa-solid fa-pen-to-square"></i>
+                </button>
+                <button
+                  class="btnborrar btn btn-outline-light"
+                  (click)="delete(Proyecto.id)"
+                >
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </div>
             </div>
-            
-            <p class="card-text pt-4">{{ Proyecto.descripcion }}</p>
-            
-            <button class="btnlink btn btn-outline-light">
-              <a href="{{ Proyecto.gitLink }}" target="_blank">Link</a>
-            </button>
-            
-            <div *ngIf="isLogged">
-              <button
-              class="btnedit btn btn-outline-light"
-              routerLink="/editproyecto/{{ Proyecto.id }}"
-              >
-              <i class="fa-solid fa-pen-to-square"></i>
-            </button>
-            
-            <button class="btnborrar btn btn-outline-light" (click)="delete(Proyecto.id)">
-              <i class="fa-solid fa-trash"></i>
-            </button>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-</div>
-
 </section>

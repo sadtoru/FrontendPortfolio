@@ -1,22 +1,21 @@
-.bgcolor{
-    background-color: var(--color-secundario);
+.bgcolor {
+  background-color: var(--color-secundario);
 }
 
-.card{
-    background-color: var(--color-principal);
+.card {
+  background-color: var(--color-principal);
 }
 
-input{
-     background-color: var(--color-blanco);
+input {
+  background-color: var(--color-blanco);
 }
 
-.btncolor{
-    background-color: var(--color-resalte);
-    color: var(--color-blanco);
-   }
+.btncolor {
+  background-color: var(--color-resalte);
+  color: var(--color-blanco);
+}
 
-
-.btncolortext:hover{
-    background-color: var(--color-blanco);
-    color: var(--color-contraste);
+.btncolortext:hover {
+  background-color: var(--color-blanco);
+  color: var(--color-contraste);
 }

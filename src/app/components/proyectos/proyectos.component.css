@@ -20,7 +20,12 @@
 }
 
 .btnlink a{
-  color: var(--color-contraste);
+  color: var(--color-blanco);
+  text-decoration: none;
+}
+
+.btnlink{
+  background-color: var(--color-contraste);
 }
 
 .btnedit{
@@ -38,4 +43,12 @@
 
 .btnborrar:hover{
   color: var(--color-tercer);
+}
+
+.card-img-top{
+  height: 250px;
+}
+
+.card-proyecto{
+  width: 18rem;
 }

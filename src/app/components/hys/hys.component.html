@@ -1,68 +1,68 @@
 <section id="skills">
-
   <div class="bgcolor">
     <div class="container py-5">
       <div
-      class="row justify-content-center align-items-center text-center text-light py-5 borderbg rounded px-4"
+        class="row justify-content-center align-items-center text-center text-light py-5 borderbg rounded px-4"
       >
-      <h2 class="col-12 mb-5">
-        Hard and Softs Skills
-        <i
-        id="plus"
-        routerLink="/newskill"
-        *ngIf="isLogged"
-        class="bi bi-plus"
-        ></i>
-      </h2>
-      
-      <div
-      class="col-12 col-md-6 col-lg-3 text-center py-4"
-      *ngFor="let skill of skill"
-      >
-      <div class="card bg-transparent">
-        <div class="card-body rounded">
-          <circle-progress
-          class="img"
-          [percent]="skill.porcentaje"
-          [radius]="60"
-          [title]="skill.nombre"
-          [titleColor]="'#fff'"
-          [showSubtitle]="false"
-          [showTitle]="false"
-          [showImage]="true"
-          [imageSrc]="skill.iconSkill"
-          [imageHeight]="40"
-          [imageWidth]="40"
-          [showUnits]="false"
-          [subtitleFontSize]="'1em'"
-          [outerStrokeWidth]="12"
-              [showInnerStroke]="false"
-              outerStrokeColor="var(--color-contraste)"
-              [animation]="true"
-              [animationDuration]="600"
+        <h2 class="col-12 mb-5">
+          Hard and Softs Skills
+          <i
+            id="plus"
+            routerLink="/newskill"
+            *ngIf="isLogged"
+            class="bi bi-plus"
+          ></i>
+        </h2>
+        <div
+          class="col-12 col-md-6 col-lg-3 text-center py-4"
+          *ngFor="let skill of skill"
+        >
+          <div class="card bg-transparent">
+            <div class="card-body rounded">
+              <circle-progress
+                class="img"
+                [percent]="skill.porcentaje"
+                [radius]="60"
+                [title]="skill.nombre"
+                [titleColor]="'#fff'"
+                [showSubtitle]="false"
+                [showTitle]="false"
+                [showImage]="true"
+                [imageSrc]="skill.iconSkill"
+                [imageHeight]="40"
+                [imageWidth]="40"
+                [showUnits]="false"
+                [subtitleFontSize]="'1em'"
+                [outerStrokeWidth]="12"
+                [showInnerStroke]="false"
+                outerStrokeColor="var(--color-contraste)"
+                [animation]="true"
+                [animationDuration]="600"
               >
-            </circle-progress>
-            <h4 class="card-title pt-3"> <i class="fa-solid fa-laptop-code color3"></i> {{ skill.nombre }}</h4>
-            <div class="pt-5" *ngIf="isLogged">
-              <button
-              class="btncolor btn btn-outline-light"
-              routerLink="/editskill/{{ skill.id }}"
-              >
-              <i class="fa-solid fa-pen-to-square"></i>
-            </button>
-            
-            <button
-            class="btntrash btn btn-outline-light"
-            (click)="delete(skill.id)"
-            >
-            <i class="fa-solid fa-trash"></i>
-          </button>
+              </circle-progress>
+              <h4 class="card-title pt-3">
+                <i class="fa-solid fa-laptop-code color3"></i>
+                {{ skill.nombre }}
+              </h4>
+              <div class="pt-5" *ngIf="isLogged">
+                <button
+                  class="btncolor btn btn-outline-light"
+                  routerLink="/editskill/{{ skill.id }}"
+                >
+                  <i class="fa-solid fa-pen-to-square"></i>
+                </button>
+
+                <button
+                  class="btntrash btn btn-outline-light"
+                  (click)="delete(skill.id)"
+                >
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-    </div>
-  </div>
-</div>
-
 </section>

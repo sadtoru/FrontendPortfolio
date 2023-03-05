@@ -2,8 +2,7 @@
   background-color: var(--color-secundario);
 }
 
-
-#icon{
+#icon {
   font-size: 2rem;
 }
 
@@ -12,28 +11,25 @@
   margin: auto;
 }
 
-.text-area{
+.text-area {
   height: 250px;
 }
 
-.cont-form input{
+.cont-form input {
   background-color: var(--color-principal);
   border: none;
 }
 
-
-.cont-form textarea{
+.cont-form textarea {
   background-color: var(--color-principal);
   border: none;
 }
 
-
-
-.btncolor{
-  background-color: var(--color-resalte);
+.btncolor {
+  background-color: var(--color-contraste);
   color: var(--color-blanco);
- }
+}
 
-.bgfooter{
+.bgfooter {
   background-color: var(--color-principal);
 }

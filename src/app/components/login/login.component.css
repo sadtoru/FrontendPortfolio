@@ -2,14 +2,10 @@ section{
   background-color: var(--color-secundario);
   height: 100vh;
 }
-/* .card-header{
-  border-bottom: 1px solid var(--color-contraste);
-} */
 
 .card {
-  background-color: var(--color-resalte);
+  background-color: var(--color-contraste);
 }
-
 
 .btnentrar:hover{
   color: var(--color-contraste);
