@@ -23,7 +23,7 @@ export class ImageProyectoService {
   getImages(){
     const imagesRef = ref(this.storage, 'proyectos')
     list(imagesRef)
-    .then(async response => {
+    .then(async (response) => {
       for(let item of response.items){
         if(this.imgRef == item.fullPath){
           this.url = await getDownloadURL(item);

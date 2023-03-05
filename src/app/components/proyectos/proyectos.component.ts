@@ -12,8 +12,8 @@ import Swal from 'sweetalert2';
 })
 export class ProyectosComponent implements OnInit {
   proyecto: Proyecto[] = [];
-  constructor(public proyectoService: ProyectoService, private tokenService: TokenService) { }
   isLogged = false;
+  constructor(public proyectoService: ProyectoService, private tokenService: TokenService) { }
 
   ngOnInit(): void {
     this.cargarProyectos();
@@ -27,7 +27,7 @@ export class ProyectosComponent implements OnInit {
 
   cargarProyectos(): void{ 
     this.proyectoService.lista().subscribe( data => {
-        this.proyecto = data
+        this.proyecto = data;
       });
   }
 
