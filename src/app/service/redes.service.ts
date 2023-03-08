@@ -8,28 +8,28 @@ import { Redes } from '../model/redes';
   providedIn: 'root'
 })
 export class RedesService {
-  url = environment.URL + 'redes/';
+  URL = environment.URL + 'redes/';
 
   constructor(private http: HttpClient) { }
 
   public lista(): Observable<Redes[]>{
-    return this.http.get<Redes[]>(this.url + 'lista');
+    return this.http.get<Redes[]>(this.URL + 'lista');
   }
 
   public detail(id: number): Observable<Redes>{
-    return this.http.get<Redes>(this.url + `detail/${id}`);
+    return this.http.get<Redes>(this.URL + `detail/${id}`);
   }
 
   public save(redes: Redes): Observable<any>{
-    return this.http.post<any>(this.url + 'create', redes);
+    return this.http.post<any>(this.URL + 'create', redes);
   }
 
   public update(id: number, redes: Redes): Observable<any>{
-    return this.http.put<any>(this.url + `update/${id}`, redes);
+    return this.http.put<any>(this.URL + `update/${id}`, redes);
   }
 
   public delete(id: number): Observable<any>{
-    return this.http.delete<any>(this.url + `delete/${id}`);
+    return this.http.delete<any>(this.URL + `delete/${id}`);
   }
 
 }

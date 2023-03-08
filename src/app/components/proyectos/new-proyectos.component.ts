@@ -18,12 +18,12 @@ export class NewProyectosComponent implements OnInit {
   constructor(private proyectoService: ProyectoService, private router: Router, public imagePService: ImageProyectoService) { }
 
   ngOnInit(): void {
-    this.imagePService.url = "";
+    this.imagePService.URL = "";
   }
 
   onCreate(): void{
-    this.imgP = this.imagePService.url;
-    const proyecto = new Proyecto(this.nombre, this.descripcion, this.imgP = this.imagePService.url, this.gitLink);
+    this.imgP = this.imagePService.URL;
+    const proyecto = new Proyecto(this.nombre, this.descripcion, this.imgP = this.imagePService.URL, this.gitLink);
     this.proyectoService.save(proyecto).subscribe(
       data => {
         Swal.fire({

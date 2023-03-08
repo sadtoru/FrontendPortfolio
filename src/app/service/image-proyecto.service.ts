@@ -6,7 +6,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
   providedIn: 'root'
 })
 export class ImageProyectoService {
-  url: string = "";
+  URL: string = "";
   imgRef: string = "";
   constructor(private storage: Storage, private spinner: NgxSpinnerService) { }
 
@@ -26,9 +26,9 @@ export class ImageProyectoService {
     .then(async (response) => {
       for(let item of response.items){
         if(this.imgRef == item.fullPath){
-          this.url = await getDownloadURL(item);
+          this.URL = await getDownloadURL(item);
           this.spinner.hide();
-          console.log("La url es: " + this.url);
+          console.log("La url es: " + this.URL);
         }
       }
     })
