@@ -53,7 +53,7 @@
                   id="img"
                   name="img"
                   (click)="imagenCargada = true"
-                  (click)="this.imagePService.url = ''"
+                  (click)="this.imagePService.URL = ''"
                   (change)="uploadImage($event)"
                   accept=".jpg, .jpeg, .png"
                   required
@@ -74,7 +74,7 @@
                   *ngIf="!imagenCargada"
                 />
                 <img
-                  [src]="imagePService.url"
+                  [src]="imagePService.URL"
                   width="200px"
                   *ngIf="imagenCargada"
                 />

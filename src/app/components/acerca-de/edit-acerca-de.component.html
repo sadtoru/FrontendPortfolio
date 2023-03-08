@@ -49,7 +49,7 @@
                   id="img"
                   name="img"
                   (click)="imagenCargada = true"
-                  (click)="this.imageService.url = ''"
+                  (click)="this.imageService.URL = ''"
                   (change)="uploadImage($event)"
                   accept=".jpg, .jpeg, .png"
                   required
@@ -65,7 +65,7 @@
                 </ngx-spinner>
                 <img [src]="persona.img" width="200px" *ngIf="!imagenCargada" />
                 <img
-                  [src]="imageService.url"
+                  [src]="imageService.URL"
                   width="200px"
                   *ngIf="imagenCargada"
                 />

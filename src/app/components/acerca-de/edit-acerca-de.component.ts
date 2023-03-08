@@ -16,7 +16,7 @@ export class EditAcercaDeComponent implements OnInit {
   constructor(private personaService: PersonaService,private activatedRouter: ActivatedRoute, private router: Router, public imageService: ImageService) { }
 
   ngOnInit(): void {
-    this.imageService.url = "";
+    this.imageService.URL = "";
     const id = this.activatedRouter.snapshot.params['id'];
     this.personaService.detail(id).subscribe(
       data => {
@@ -37,8 +37,8 @@ export class EditAcercaDeComponent implements OnInit {
 
   onUpdate(): void{
     const id = this.activatedRouter.snapshot.params['id'];
-    if(!(this.imageService.url == "")){
-      this.persona.img = this.imageService.url;
+    if(!(this.imageService.URL == "")){
+      this.persona.img = this.imageService.URL;
     }
     this.personaService.update(id, this.persona).subscribe(
       data => {
@@ -72,7 +72,7 @@ export class EditAcercaDeComponent implements OnInit {
 
   uploadImage($event:any){
     if($event.target.files[0] == null){
-      this.imageService.url = this.persona.img;
+      this.imageService.URL = this.persona.img;
     } else {
       const id = this.activatedRouter.snapshot.params['id'];
       const name = "perfil_" + id;

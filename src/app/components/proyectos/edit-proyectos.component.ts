@@ -18,7 +18,7 @@ export class EditProyectosComponent implements OnInit {
 
 
   ngOnInit(): void {   /** spinner starts on init */
-    this.imagePService.url = "";
+    this.imagePService.URL = "";
     const id = this.activatedRouter.snapshot.params['id'];
     this.proyectoService.detail(id).subscribe(
       data => {
@@ -41,8 +41,8 @@ export class EditProyectosComponent implements OnInit {
 
   onUpdate(): void{
     const id = this.activatedRouter.snapshot.params['id'];
-    if(!(this.imagePService.url == "")){
-      this.proyecto.imgP = this.imagePService.url;
+    if(!(this.imagePService.URL == "")){
+      this.proyecto.imgP = this.imagePService.URL;
     }
     this.proyectoService.update(id, this.proyecto).subscribe(
       data => {
@@ -77,7 +77,7 @@ export class EditProyectosComponent implements OnInit {
 
   uploadImage($event:any){
     if($event.target.files[0] == null){
-      this.imagePService.url = this.proyecto.imgP;
+      this.imagePService.URL = this.proyecto.imgP;
     } else {
       const name = "proyecto_" + this.proyecto.nombre;
       this.imagePService.uploadImage($event, name);
